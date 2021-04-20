@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <h1 style="text-align:center;color:#9F5AE7;font-family:'Lucida Console'">Quizzard! </h1>
+ <p style="text-align:center;color:#FFFFFF;font-family:'Lucida Console'"> Are You A Quiz Wizzard?<p>
+ <hr>
+ <meta charset="utf-8" />
+ <meta name="Author" content="Evan Yasuk-" />
+ <meta name="generator" content="emacs" />
+ <style>
+a:link, a:visited {
+  background-color: #9F5AE7;
+  color: white;
+  padding: 18px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: purple;
+}
+</style>
+ <head/>
+<body style="background-color:#79E0BE;">
+<p style="text-align:center;color:#FFFFFF;font-family:'Lucida Console'"> Welcome to Quizzard!!<p>
+<p style="color:#FFFFFF;font-family:'Lucida Console'"> This is Group 1's project for the 2021 Spring semester of Advanced Programming with Java.<p>
+<p style="color:#FFFFFF;font-family:'Lucida Console'"> Now that you've made an account try taking one of our quizzes and get on the leaderboard!<p>
+<p style="color:#FFFFFF;font-family:'Lucida Console'"> Get to the top of the leaderboard and become a real Quiz Wizzard!<p>
+<a href="(link to quiz)" target="_blank">Quiz 1</a>
+</body>
+</html>
