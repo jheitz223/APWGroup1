@@ -1,5 +1,16 @@
+let startTime = 0;
+
+function Timer() {
+
+    startTime = getTime();
+
+}
+
 //Runs when submit button is clicked
 function SubmitQuiz() {
+
+    let endTime = getTime();
+    let quizTime = (endTime - startTime) / 1000;
 
 //  Stores number of correct answers
     let correct = 0;
@@ -60,6 +71,6 @@ function SubmitQuiz() {
     if (document.getElementById('multchoiceQ24A3').checked)
         correct++;
 
-    alert(correct);
+    alert("Score: " + correct + " Time: " + quizTime);
 
 };
