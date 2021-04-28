@@ -184,5 +184,15 @@ a:hover, a:active {
 <p>         </p>
 
   <input type="submit" onclick="SubmitQuiz()" value="Submit Answers">
+  
+<!--This is the userscore submission-->
+<p>Enter username for scores!<p>
+    <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
+      <div class="input">
+        <label for="form-username">Username:</label>
+        <input type="text" username="username" id="form-username" required>
+      </div>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
