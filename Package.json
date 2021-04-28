@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jheitz223/APWGroup1/issues"
   },
-  "homepage": "https://github.com/jheitz223/APWGroup1#readme"
+  "homepage": "https://github.com/jheitz223/APWGroup1#readme",
+  "dependencies": {
+    "mongodb": "^3.6.6"
+  }
 }
