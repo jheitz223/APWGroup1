@@ -1,10 +1,11 @@
 {
   "name": "apw-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "* Andrew Tang * Enkhjargal Davaadolgor * Evan Yasuk * Jonathan Heitz * Khadeza Elias",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/jheitz223/APWGroup1/issues"
   },
-  "homepage": "https://github.com/jheitz223/APWGroup1#readme"
+  "homepage": "https://github.com/jheitz223/APWGroup1#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.6"
+  }
 }

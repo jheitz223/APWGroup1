@@ -2,32 +2,33 @@
 <html>
 <head>
 
- <h1 style="text-align:center;color:#9F5AE7;font-family:'Lucida Console'">Quizzard! </h1>
- <p style="text-align:center;color:#FFFFFF;font-family:'Lucida Console'"> Are You A Quiz Wizzard?<p>
+<h1 style="text-align:center;color:#9F5AE7;font-family:'Lucida Console'">Quizzard! </h1>
+<p style="text-align:center;color:#FFFFFF;font-family:'Lucida Console'"> Are You A Quiz Wizzard?<p>
   
- <hr>
- <meta charset="utf-8" />
- <meta name="Author" content="Evan Yasuk-" />
- <meta name="generator" content="emacs" />
- <style>
+<hr>
+<meta charset="utf-8" />
+<meta name="Author" content="Evan Yasuk, Jonathan Heitz" />
+<meta name="generator" content="emacs" />
+<style>
 a:link, a:visited {
-  background-color: #9F5AE7;
-  color: white;
-  padding: 18px 26px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+	background-color: #9F5AE7;
+	color: white;
+	padding: 18px 26px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
 }
 
 a:hover, a:active {
-  background-color: purple;
+	background-color: purple;
 }
 </style>
- <head/>
-<body style="background-color:#79E0BE;">
-<script src="QuizFunctions.js"></script>
+</head>
+
+<body onload="StartTimer()" style="background-color:#79E0BE;">
+
 <h1>Art</h1>
-<form action="/action_page.php">
+
 <p class = "questions">Which artist cut their ear off?</p>
 <input type = "radio" id = "multchoiceQ1A1" name = "question1" value = "Leonardo da Vinci"> Leonardo da Vinci<br>
 <input type = "radio" id = "multchoiceQ1A2" name = "question1" value = "Vincent van Gogh"> Vincent van Gogh<br>
@@ -181,8 +182,85 @@ a:hover, a:active {
 <input type = "radio" id = "multchoiceQ24A2" name = "question24" value = "Jack Dempsey"> Jack Dempsey<br>
 <input type = "radio" id = "multchoiceQ24A3" name = "question24" value = "Rocky Marciano"> Rocky Marciano<br>
 <input type = "radio" id = "multchoiceQ24A4" name = "question24" value = "Sonny Liston"> Sonny Liston<br>
-<p>         </p>
 
-  <input type="submit" onclick="SubmitQuiz()" value="Submit Answers">
+<button onclick = "SubmitQuiz()">Submit Answers</button> 
+
+<script>
+
+    var QuizStart;
+    function StartTimer() {
+        QuizStart = Date.now();
+    }
+
+//  Runs when submit button is clicked
+    function SubmitQuiz() {
+
+        var time = (Date.now() - QuizStart) / 1000;
+
+//      Stores number of correct answers
+        let correct = 0;
+
+//      Check answers:
+//      Art:
+        if (document.getElementById('multchoiceQ1A2').checked)
+            correct++; 
+        if (document.getElementById('multchoiceQ2A3').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ3A3').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ4A1').checked)
+            correct++;
+//      Entertainment:
+        if (document.getElementById('multchoiceQ5A4').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ6A1').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ7A2').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ8A3').checked)
+            correct++;
+//      Geography:
+        if (document.getElementById('multchoiceQ9A2').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ10A1').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ11A3').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ12A4').checked)
+            correct++;
+//      History:
+        if (document.getElementById('multchoiceQ13A3').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ14A3').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ15A1').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ16A4').checked)
+            correct++;
+//      Science:
+        if (document.getElementById('multchoiceQ17A4').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ18A2').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ19A3').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ20A3').checked)
+            correct++;
+//      Sports:
+        if (document.getElementById('multchoiceQ21A2').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ22A4').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ23A4').checked)
+            correct++;
+        if (document.getElementById('multchoiceQ24A3').checked)
+            correct++;
+
+    	alert("Score: " + correct + "/24 Time: " + time + " seconds.");
+		window.location.replace("leaderboard");
+
+	};
+</script>
+
 </body>
 </html>
