@@ -4,7 +4,7 @@ const host = 'localhost';
 const port = 80;
 var Homepage;
 var Quiz;
-var Leaderboard;
+//var Leaderboard;
 
 fs.readFile("Homepage.html")
     .then(contents => {
@@ -29,7 +29,7 @@ fs.readFile("Quiz.html")
         console.error(`Could not read Quiz.html file: ${err}`);
         process.exit(1);
     });
-
+/*
 fs.readFile("Leaderboard.html")
     .then(contents => {
         Leaderboard = contents;
@@ -41,7 +41,7 @@ fs.readFile("Leaderboard.html")
         console.error(`Could not read Leaderboard.html file: ${err}`);
         process.exit(1);
     });
-
+*/
 const requestListener = function (req, res) {
 
     res.setHeader("Content-Type", "text/html");
@@ -54,10 +54,10 @@ const requestListener = function (req, res) {
             res.writeHead(200);
             res.end(Quiz);
             break;
-        case "/leaderboard":
+        /*case "/leaderboard":
             res.writeHead(200);
             res.end(Leaderboard);
-            break;
+            break;*/
     }
     
 }
