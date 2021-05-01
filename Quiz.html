@@ -188,6 +188,7 @@ a:hover, a:active {
 <script>
 
     var QuizStart;
+//  Record quiz start time
     function StartTimer() {
         QuizStart = Date.now();
     }
@@ -195,6 +196,7 @@ a:hover, a:active {
 //  Runs when submit button is clicked
     function SubmitQuiz() {
 
+//      Record total time, converting from milliseconds to seconds
         var time = (Date.now() - QuizStart) / 1000;
 
 //      Stores number of correct answers
@@ -256,8 +258,8 @@ a:hover, a:active {
         if (document.getElementById('multchoiceQ24A3').checked)
             correct++;
 
-    	alert("Score: " + correct + "/24 Time: " + time + " seconds.");
-		window.location.replace("leaderboard");
+    	alert("Score: " + correct + "/24 Time: " + time + " seconds."); // Display number of correct answers and time taken
+		window.location.replace("leaderboard"); // Redirect to leaderboard
 
 	};
 </script>
