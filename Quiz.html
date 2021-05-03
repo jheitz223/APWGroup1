@@ -259,15 +259,18 @@ a:hover, a:active {
             correct++;
 
         //Diff output depending on # of correct
-        if (correct >= 19)
+        if (correct <= 19)
             alert("Not quite there being a quizzard yet!");
             alert("Score: " + correct + "/24 Time: " + time + " seconds."); // Display number of correct answers and time taken
-        if (correct <= 19)
+            break;
+        if (correct >= 19)
             alert("Almost! One Step closer to being a Quizzard!");
             alert("Score: " + correct + "/24 Time: " + time + " seconds.");
+            break;
         if (correct == 24)
             alert("YOU ARE A QUIZZARD");
             alert("Score: " + correct + "/24 Time: " + time + " seconds.");
+            break;
 		
             // Redirect to leaderboard
             window.location.replace("leaderboard"); 
