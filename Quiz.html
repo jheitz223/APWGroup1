@@ -258,19 +258,17 @@ a:hover, a:active {
         if (document.getElementById('multchoiceQ24A3').checked)
             correct++;
 
-        //Diff output depending on # of correct
+//      Display number of correct answers and time taken, different output depending on # of correct
         if (correct <= 19)
-            alert("Sorry, you must study harder to be a Quizzard...");
+            alert("Sorry, you must study harder to be a Quizzard...\nScore: " + correct + "/24 Time: " + time + " seconds.");
         if (correct >= 19)
-            alert("Almost! One Step closer to being a Quizzard!");
+            alert("Almost! One Step closer to being a Quizzard!\nScore: " + correct + "/24 Time: " + time + " seconds.");
         if (correct == 24)
-            alert("YOU ARE A QUIZZARD");
+            alert("YOU ARE A QUIZZARD\nScore: " + correct + "/24 Time: " + time + " seconds.");
 
-        // Display number of correct answers and time taken    
-            alert("Score: " + correct + "/24 Time: " + time + " seconds."); 
-
-        // Redirect to leaderboard
-            window.location.replace("leaderboard"); 
+//      Redirect to leaderboard
+        window.location.replace("leaderboard"); 
+        
 	};
 </script>
 
