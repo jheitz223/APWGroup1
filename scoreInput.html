@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Alert Scoreboard</h1>
+
+<p>An alert will pop up w/ ur score</p>
+<form>
+  <label for="username">Username: </label>
+  <input type="text" id="username" name="username"><br>
+  
+  <label for="score">Score: </label>
+  <input type="score" id="score" name="score"><br>
+  
+  <label for="time">Time(s): </label>
+  <input type="text" id="time" name="time"><br>
+  
+  <input type="button" value="submit" onclick="scoreboard()">
+</form>
+
+<script>
+function scoreboard() {
+  alert(username +" " + score + " " + time);
+}
+</script>
+
+</body>
+</html>
