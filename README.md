@@ -23,3 +23,6 @@
 2.  Connect to http://localhost:8000
 
 3.  Take the quiz!
+
+##Credits:
+Went to tutoring (not Rowan) and was assisted with quiz code -Khadeza
