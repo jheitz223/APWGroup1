@@ -1,7 +1,7 @@
 const http = require("http");
 const fs = require('fs').promises;
 const host = 'localhost';
-const port = 80;
+const port = 8000;
 var Homepage;
 var Quiz;
 //var Leaderboard;
@@ -63,6 +63,10 @@ const requestListener = function (req, res) {
         case "/quiz":
             res.writeHead(200);
             res.end(Quiz);
+            break;
+        default:
+            res.writeHead(200);
+            res.end(Homepage);
             break;
         /*case "/leaderboard":
             res.writeHead(200);
