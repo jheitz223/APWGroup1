@@ -24,5 +24,5 @@
 
 3.  Take the quiz!
 
-##Credits:
-Went to tutoring (not Rowan) and was assisted with quiz code -Khadeza
+## Credits:
+* Went to tutoring (not Rowan) and was assisted with quiz code -Khadeza
